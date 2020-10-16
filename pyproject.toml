@@ -1,11 +1,22 @@
 [tool.poetry]
 name = "chameleon-log"
-version = "0.1.0"
+version = "0.1.1"
 description = "Python colored logging setup which adapts to environment"
 authors = ["Nguyễn Hồng Quân <ng.hong.quan@gmail.com>"]
+readme = "README.rst"
+license = "MIT"
+homepage = "https://github.com/AgriConnect/chameleon-log"
+repository = "https://github.com/AgriConnect/chameleon-log.git"
+classifiers = [
+    "Intended Audience :: Developers",
+    "Topic :: System :: Logging",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Programming Language :: Python :: 3 :: Only",
+    "Operating System :: POSIX :: Linux",
+]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.6"
 single-version = "^1.4.1"
 logbook = "^1.5.3"
 
