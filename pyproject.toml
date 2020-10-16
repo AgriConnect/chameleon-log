@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "chameleon-log"
+version = "0.1.0"
+description = "Python colored logging setup which adapts to environment"
+authors = ["Nguyễn Hồng Quân <ng.hong.quan@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+single-version = "^1.4.1"
+logbook = "^1.5.3"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
