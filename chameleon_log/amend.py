@@ -1,9 +1,10 @@
 
 import logging
-from typing import Dict
+from logging import Logger
+from typing import Dict, Optional, Callable
 
 import logbook
-from logbook import LogRecord
+from logbook import LogRecord, Handler
 from logbook.compat import LoggingHandler as _LoggingHandler
 
 
@@ -13,8 +14,10 @@ class StdLoggingHandler(_LoggingHandler):
     This is to fix the original logbook's LoggingHandler, which tranfers
     all message to the root logger, instead of equivalent channels.
     '''
-    def __init__(self, logger=None, level=logbook.NOTSET, filter=None,
-                 bubble=False):
+    def __init__(self, logger: Optional[Logger] = None,
+                 level: int = logbook.NOTSET,
+                 filter: Optional[Callable[[LogRecord, Handler], bool]] = None,
+                 bubble: bool = False):
         super().__init__(logger, level, filter, bubble)
         self.sublogs: Dict[str, logging.Handler] = {}
 

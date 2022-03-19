@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "chameleon-log"
-version = "0.1.1"
+version = "0.2.0"
 description = "Python colored logging setup which adapts to environment"
 authors = ["Nguyễn Hồng Quân <ng.hong.quan@gmail.com>"]
 readme = "README.rst"
@@ -14,10 +14,14 @@ classifiers = [
     "Programming Language :: Python :: 3 :: Only",
     "Operating System :: POSIX :: Linux",
 ]
+packages = [
+    {include='chameleon_log'},
+    {include='chameleon_log/py.typed'},
+]
 
 [tool.poetry.dependencies]
 python = "^3.6"
-single-version = "^1.4.1"
+single-version = "^1.5.1"
 logbook = "^1.5.3"
 
 [tool.poetry.dev-dependencies]
